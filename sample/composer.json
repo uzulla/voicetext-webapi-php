@@ -1,0 +1,5 @@
+{
+    "require":{
+        "uzulla/voicetext-api": "dev-master"
+    }
+}
