@@ -14,17 +14,19 @@ class Response
     /** @var string body saved filename */
     public $tempFileName;
 
-    public function __construct(GuzzleResponseInterface $res)
+    public function __construct(GuzzleResponseInterface $res=null)
     {
-        $this->statusCode = (int)$res->getStatusCode();
-        $this->contentType = $res->getHeader('content-type');
+        if(!is_null($res)){
+            $this->statusCode = (int)$res->getStatusCode();
+            $this->contentType = $res->getHeader('content-type');
 
-        if ($this->statusCode === 200 && $this->contentType === 'audio/wave') {
-            $tmp_file_name = tempnam(sys_get_temp_dir(), 'vt_wav_');
-            @file_put_contents($tmp_file_name, $res->getBody());
-            $this->tempFileName = $tmp_file_name;
-        } else {
-            $this->responseRaw = $res->getBody();
+            if ($this->statusCode === 200 && $this->contentType === 'audio/wave') {
+                $tmp_file_name = tempnam(sys_get_temp_dir(), 'vt_wav_');
+                @file_put_contents($tmp_file_name, $res->getBody());
+                $this->tempFileName = $tmp_file_name;
+            } else {
+                $this->responseRaw = $res->getBody();
+            }
         }
     }
 

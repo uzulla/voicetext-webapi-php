@@ -32,4 +32,16 @@ class RequestTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($res->isSuccess());
     }
+
+    public function testWrongAPIKey()
+    {
+        $query = new VTQ;
+        $query->apiKey = 'wrong_key';
+        $query->text = 'こんにちは';
+
+        $res = VTR::getResponse($query);
+
+        $this->assertFalse($res->isSuccess());
+        $this->assertEquals(401,$res->statusCode);
+    }
 }
