@@ -1,3 +1,4 @@
 /vendor/
 /test/config.php
-
+/sample/vendor
+/sample/*.wav
