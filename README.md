@@ -21,17 +21,17 @@ VoiceText is Text-To-Speech software, that API generate wave audio file.
 Detail here. [VoiceText Web API](https://cloud.voicetext.jp/webapi)
 
 
-# REQUIRE
+### REQUIRE
 
 - PHP>=5.4
 - Composer
 
 
-# SETUP
+### SETUP
 
 composerでuzulla/voicetext-apiをrequireしてください。
 
-# SYNOPSIS(利用例)
+### SYNOPSIS(利用例)
 
 ```
 <?php
