@@ -11,14 +11,9 @@ VoiceText Web APIは、入力したテキストを音声ファイル（Wav形式
 VoiceText is Text-To-Speech software, that API generate wave audio file.
 
 
-> VoiceText Web API は HOYAサービス株式会社様が提供するWEB APIです
+> VoiceText Web API は HOYAサービス株式会社様が提供するWEB APIです。詳細はこちら [VoiceText Web API](https://cloud.voicetext.jp/webapi)
 
-> VoiceText Web API provided by HOYA Service Corporation.
-
-
-詳細はこちら [VoiceText Web API](https://cloud.voicetext.jp/webapi)
-
-Detail here. [VoiceText Web API](https://cloud.voicetext.jp/webapi)
+> VoiceText Web API provided by HOYA Service Corporation. Detail here. [VoiceText Web API](https://cloud.voicetext.jp/webapi)
 
 
 ### REQUIRE
