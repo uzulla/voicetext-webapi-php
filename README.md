@@ -28,7 +28,7 @@ composerでuzulla/voicetext-apiをrequireしてください。
 
 ### SYNOPSIS(利用例)
 
-```
+```php
 <?php
 require_once('vendor/autoload.php');
 
@@ -49,17 +49,18 @@ if($res->isSuccess()){
   $downloaded_wav_file_name = $res->tempFileName;
 }else{
   echo "request fail.";
-  var_dump($response);
+  var_dump($res);
 }
 
 ```
 
 also ...
 
-```
+```php
+<?php
 // ...
 
-// build query
+// param details, see official api doc https://cloud.voicetext.jp/webapi/docs/api
 $query = new VTQ;
 $query->text = 'こんにちは';
 $query->speaker = 'haruka';
@@ -72,14 +73,8 @@ $query->volume = 100;
 $error_list = $query->validate();
 
 if(!empty($error_list)){
-  // query is invalid(local validation). use correct data.
-  var_dump($error_list);
-  /*
-  array(1) {
-    'emotion' =>
-    string(35) "specify speaker not support emotion"
-  }
-  */
+  // query is invalid (local validation). use correct data.
+  var_dump($error_list); // array(1) { 'emotion' => string(35) "specify speaker not support emotion" }
 
 }else{
   // request
@@ -89,7 +84,7 @@ if(!empty($error_list)){
     $downloaded_wav_file_name = $res->tempFileName;
   }else{
     echo "request fail.";
-    var_dump($response);
+    var_dump($res);
   }
 }
 ```
@@ -105,3 +100,4 @@ MIT
 ### SEE ALSO
 
 - VoiceText Web API [https://cloud.voicetext.jp/webapi](https://cloud.voicetext.jp/webapi)
+- Official API Document [https://cloud.voicetext.jp/webapi/docs/api](https://cloud.voicetext.jp/webapi/docs/api)
