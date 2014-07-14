@@ -99,10 +99,14 @@ if(!empty($error_list)){
 }
 ```
 
-# LICENSE
+### SAMPLE
+
+see `sample/README.md`
+
+### LICENSE
 
 MIT
 
-# SEE ALSO
+### SEE ALSO
 
 - VoiceText Web API [https://cloud.voicetext.jp/webapi](https://cloud.voicetext.jp/webapi)

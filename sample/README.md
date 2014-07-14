@@ -1,4 +1,4 @@
-サンプルコード
+SAMPLE CODE
 ============
 
 指定したテキストのwavをダウンロードするツールです
@@ -12,6 +12,8 @@ $ composer install
 ```
 
 APIキーをVoiceText WEB APIのサイトから取得してください。
+
+- VoiceText Web API [https://cloud.voicetext.jp/webapi](https://cloud.voicetext.jp/webapi)
 
 
 EXEC
