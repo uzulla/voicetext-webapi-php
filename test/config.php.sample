@@ -1,0 +1,2 @@
+<?php
+\Uzulla\WebApi\VoiceText\Query::$defaultApiKey = 'YOUR API KEY';

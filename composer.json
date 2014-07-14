@@ -1,0 +1,27 @@
+{
+    "name": "uzulla/voicetext-api",
+    "description": "VoiceText Web API(https://cloud.voicetext.jp/webapi) wrapper library.",
+    "keywords": ["tts", "lib"],
+    "type": "library",
+    "homepage": "http://github.com/uzulla/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Junichi Ishida aka uzulla",
+            "email": "uzulla@himitsukichi.com",
+            "homepage": "http://twitter.com/uzulla/"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "guzzlehttp/guzzle": "4.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Uzulla\\WebApi\\VoiceText": "lib/"
+        }
+    }
+}
