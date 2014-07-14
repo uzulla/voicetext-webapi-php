@@ -27,7 +27,7 @@ class Request
             $res = new Response();
             $res->statusCode = (int)$e->getResponse()->getStatusCode();
             $res->contentType = $e->getResponse()->getHeader('content-type');
-            $res->responseRaw = $e->getResponse()->getBody();
+            $res->responseRaw = "".$e->getResponse()->getBody(); // tweak
             return $res;
         }
     }
