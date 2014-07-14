@@ -18,13 +18,7 @@ $query = new VTQ;
 $query->text = $text;
 
 // request
-try{
-    $res = VTR::getResponse($query);
-}catch(\Exception $e){
-    echo "request fail.".PHP_EOL;
-    var_dump($e);
-    exit;
-}
+$res = VTR::getResponse($query);
 
 if($res->isSuccess()){
     $file_name = __DIR__."/".time().".wav";

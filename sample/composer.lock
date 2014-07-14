@@ -130,12 +130,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/uzulla/voicetext-webapi-php.git",
-                "reference": "5f28edc95d06b0936da0efc8b582d8fa977411aa"
+                "reference": "ebc3a476fdeb967c3ae767e16b0d4f1909e9a853"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uzulla/voicetext-webapi-php/zipball/5f28edc95d06b0936da0efc8b582d8fa977411aa",
-                "reference": "5f28edc95d06b0936da0efc8b582d8fa977411aa",
+                "url": "https://api.github.com/repos/uzulla/voicetext-webapi-php/zipball/ebc3a476fdeb967c3ae767e16b0d4f1909e9a853",
+                "reference": "ebc3a476fdeb967c3ae767e16b0d4f1909e9a853",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
                 "lib",
                 "tts"
             ],
-            "time": "2014-07-14 13:08:29"
+            "time": "2014-07-14 14:02:01"
         }
     ],
     "packages-dev": [],
