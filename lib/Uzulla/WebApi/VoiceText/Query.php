@@ -12,6 +12,8 @@ class Query
     static $defaultPitch = 100;
     static $defaultSpeed = 100;
     static $defaultVolume = 100;
+    static $speakerList = ['show', 'haruka', 'hikari', 'takeru', 'santa'];
+    static $emotionalSpeakerList = ['show', 'haruka', 'hikari', 'takeru', 'santa'];
 
     public $apiKey;
     public $text;
@@ -50,23 +52,12 @@ class Query
             $error_list['text'] = 'text length must be between 1-200';
         }
 
-        if (
-            $this->speaker !== 'show' &&
-            $this->speaker !== 'haruka' &&
-            $this->speaker !== 'hikari' &&
-            $this->speaker !== 'takeru' &&
-            $this->speaker !== 'santa'
-        ) {
+        if (!in_array($this->speaker, static::$speakerList)) {
             $error_list['speaker'] = 'unknown speaker';
         }
 
         if (!is_null($this->emotion)) {
-            if (
-                $this->speaker !== 'haruka' &&
-                $this->speaker !== 'hikari' &&
-                $this->speaker !== 'takeru' &&
-                $this->speaker !== 'santa'
-            ) {
+            if (!in_array($this->speaker, static::$emotionalSpeakerList)) {
                 $error_list['emotion'] = 'specify speaker not support emotion';
             } else if (
                 $this->emotion !== 'happiness' &&
@@ -105,7 +96,7 @@ class Query
     public function generateParamsHash()
     {
         if (!$this->isOk())
-            throw new \InvalidArgumentException('query is not ok'. print_r($this->validate(),1));
+            throw new \InvalidArgumentException('query is not ok: cause '. print_r($this->validate(),1));
 
         $query = [];
         $query['text'] = $this->text;
