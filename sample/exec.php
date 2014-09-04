@@ -1,5 +1,5 @@
 <?php
-require_once("vendor/autoload.php");
+require_once("../vendor/autoload.php");
 
 if(!isset($argv[2]))
     die('usage: php exec.php x_your_api_key_x "こんにちは" '.PHP_EOL);
@@ -16,6 +16,7 @@ use \Uzulla\WebApi\VoiceText\Query as VTQ;
 // build query
 $query = new VTQ;
 $query->text = $text;
+$query->speaker = 'santa';
 
 // request
 $res = VTR::getResponse($query);

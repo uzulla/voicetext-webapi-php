@@ -54,7 +54,8 @@ class Query
             $this->speaker !== 'show' &&
             $this->speaker !== 'haruka' &&
             $this->speaker !== 'hikari' &&
-            $this->speaker !== 'takeru'
+            $this->speaker !== 'takeru' &&
+            $this->speaker !== 'santa'
         ) {
             $error_list['speaker'] = 'unknown speaker';
         }
@@ -63,7 +64,8 @@ class Query
             if (
                 $this->speaker !== 'haruka' &&
                 $this->speaker !== 'hikari' &&
-                $this->speaker !== 'takeru'
+                $this->speaker !== 'takeru' &&
+                $this->speaker !== 'santa'
             ) {
                 $error_list['emotion'] = 'specify speaker not support emotion';
             } else if (
@@ -103,7 +105,7 @@ class Query
     public function generateParamsHash()
     {
         if (!$this->isOk())
-            throw new \InvalidArgumentException('query is not ok');
+            throw new \InvalidArgumentException('query is not ok'. print_r($this->validate(),1));
 
         $query = [];
         $query['text'] = $this->text;
